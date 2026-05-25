@@ -12,12 +12,42 @@ Item {
     property var currentGame: api.allGames.get(currentIndex)
 
     Image {
+        id: bgImg
         anchors.fill: parent
         source: currentGame.assets.background || currentGame.assets.banner || currentGame.assets.screenshot || ""
         fillMode: Image.PreserveAspectCrop
         layer.enabled: true
         layer.effect: FastBlur {
             radius: root.blurRadius
+        }
+
+        Behavior on source {
+            SequentialAnimation {
+                NumberAnimation {
+                    target: bgImg
+                    property: "opacity"
+                    to: 0.8
+                    duration: 200
+                    easing.type: Easing.InOutQuad
+                }
+
+                PropertyAction {
+                    target: bgImg
+                    property: "source"
+                }
+
+                NumberAnimation {
+                    target: bgImg
+                    property: "opacity"
+                    to: 1
+                    duration: 200
+                    easing.type: Easing.InOutQuad
+                }
+            }
+        }
+
+        Behavior on opacity { 
+            NumberAnimation { duration: 250; easing.type: Easing.InOutQuad } 
         }
     }
 

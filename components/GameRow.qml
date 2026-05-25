@@ -41,7 +41,7 @@ ListView {
             }
 
             scale: delegateRoot.isSelected ? 1.08 : 1.0
-            opacity: delegateRoot.isSelected ? 1.0 : 0.5 
+            opacity: delegateRoot.isSelected ? 1.0 : 0.5
 
             layer.enabled: true
             layer.effect: OpacityMask {
