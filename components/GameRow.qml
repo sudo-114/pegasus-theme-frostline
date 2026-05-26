@@ -11,6 +11,12 @@ ListView {
     snapMode: ListView.SnapToItem
     model: api.allGames
 
+    highlightRangeMode: ListView.StrictlyEnforceRange
+    preferredHighlightBegin: 40
+    preferredHighlightEnd: width - 240
+    highlightMoveDuration: 100
+    highlightMoveVelocity: -1
+
     delegate: Item {
         id: delegateRoot
         width: 200
