@@ -7,8 +7,6 @@ FocusScope {
 
     readonly property color clrBackground: "#111113"
 
-    readonly property real coverTilt: -4
-
     Rectangle {
         anchors.fill: parent
         color: root.clrBackground
@@ -17,6 +15,29 @@ FocusScope {
     Background {
         anchors.fill: parent
         currentIndex: gameList.currentIndex
+    }
+
+    HeroImg {
+        id: heroImg
+        currentIndex: gameList.currentIndex
+        anchors {
+            left: parent.left
+            leftMargin: parent.width * 0.25
+            top: parent.top
+            topMargin: parent.height * 0.1
+        }
+    }
+
+    HeroText {
+        currentIndex: gameList.currentIndex
+        anchors {
+            left: heroImg.right
+            leftMargin: 40
+            right: parent.right
+            rightMargin: parent.width * 0.08
+            verticalCenter: parent.verticalCenter
+            verticalCenterOffset: heroImg.height * -0.17
+        }
     }
 
     GameRow {
