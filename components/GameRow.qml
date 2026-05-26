@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtGraphicalEffects 1.15
+import QtMultimedia 5.15
 
 ListView {
     id: gameList
@@ -17,6 +18,22 @@ ListView {
     highlightMoveDuration: 100
     highlightMoveVelocity: -1
 
+    SoundEffect {
+        id: navSound
+        source: "../assets/audio/nav.wav"
+        volume: 0.55
+    }
+
+    SoundEffect {
+        id: launchSound
+        source: "../assets/audio/launch.wav"
+        volume: 0.75
+    }
+
+    onCurrentIndexChanged: {
+        navSound.play();
+    }
+
     delegate: Item {
         id: delegateRoot
         width: 200
@@ -25,6 +42,7 @@ ListView {
         Keys.onReleased: {
             if (api.keys.isAccept(event)) {
                 event.accepted = true;
+                launchSound.play();
                 modelData.launch();
                 return;
             }
