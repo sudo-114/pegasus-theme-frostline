@@ -22,7 +22,7 @@ Item {
 
     function formatLastPlayed(date) {
         if (!date || isNaN(date.getTime()))
-            return "Never";
+            return "Never played";
         return Qt.formatDate(date, "MMM d, yyyy");
     }
 
@@ -32,12 +32,11 @@ Item {
 
         Text {
             id: titleText
-            width: parent.width
+            width: parent.width * 0.9
             text: currentGame.title || ""
             color: "#ffffff"
             font.pixelSize: Math.max(30, root.height * 0.09)
             font.bold: true
-            font.family: "sans-serif"
             wrapMode: Text.WordWrap
             maximumLineCount: 2
             elide: Text.ElideRight
@@ -47,11 +46,10 @@ Item {
 
         Text {
             id: descText
-            width: parent.width
+            width: parent.width * 0.7
             text: currentGame.description || "No description available..."
             color: root.bodyTxt
             font.pixelSize: Math.max(17, root.height * 0.022)
-            font.family: "sans-serif"
             wrapMode: Text.WordWrap
             maximumLineCount: 3
             elide: Text.ElideRight
@@ -64,7 +62,7 @@ Item {
             spacing: 4
 
             Text {
-                text: "Playtime: " + formatPlayTime(currentGame.playTime)
+                text: "Play time: " + formatPlayTime(currentGame.playTime)
                 color: root.dimColor
                 font.pixelSize: root.fontSize
             }

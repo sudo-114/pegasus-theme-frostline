@@ -22,9 +22,9 @@ FocusScope {
         currentIndex: gameList.currentIndex
         anchors {
             left: parent.left
-            leftMargin: parent.width * 0.25
+            leftMargin: parent.width * 0.20
             top: parent.top
-            topMargin: parent.height * 0.1
+            topMargin: parent.height * 0.17
         }
     }
 
@@ -36,7 +36,7 @@ FocusScope {
             right: parent.right
             rightMargin: parent.width * 0.08
             verticalCenter: parent.verticalCenter
-            verticalCenterOffset: heroImg.height * -0.17
+            verticalCenterOffset: heroImg.height * -0.10
         }
     }
 

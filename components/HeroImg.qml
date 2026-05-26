@@ -3,8 +3,8 @@ import QtGraphicalEffects 1.15
 
 Item {
     id: root
-    width: parent.width * 0.20
-    height: parent.height * 0.50
+    width: parent.width * 0.18
+    height: parent.height * 0.45
 
     property int currentIndex: 0
     property var currentGame: api.allGames.get(currentIndex)

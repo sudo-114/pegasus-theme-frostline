@@ -4,9 +4,9 @@ import QtGraphicalEffects 1.15
 Item {
     id: root
 
-    readonly property color gradient0: Qt.rgba(0, 0, 0, 0.3)
-    readonly property color gradient1: Qt.rgba(0, 0, 0, 0.85)
-    readonly property real blurRadius: 55
+    readonly property color gradient0: Qt.rgba(0, 0, 0, 0.5)
+    readonly property color gradient1: Qt.rgba(0, 0, 0, 1)
+    readonly property real blurRadius: 20
 
     property int currentIndex: 0
     property var currentGame: api.allGames.get(currentIndex)
