@@ -22,7 +22,13 @@ ListView {
         width: 200
         height: gameList.height
 
-        Keys.onReturnPressed: modelData.launch()
+        Keys.onReleased: {
+            if (api.keys.isAccept(event)) {
+                event.accepted = true;
+                modelData.launch();
+                return;
+            }
+        }
 
         readonly property bool isSelected: ListView.isCurrentItem
 
