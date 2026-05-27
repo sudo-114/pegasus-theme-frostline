@@ -52,4 +52,13 @@ FocusScope {
             rightMargin: 40
         }
     }
+
+    Text {
+        text: api.allGames.count + " games"
+        color: Qt.rgba(1, 1, 1, 0.8)
+        font.pixelSize: 16
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.margins: 30
+    }
 }

@@ -12,6 +12,7 @@ _Screenshots coming soon._
 - Hero view with cover art, title, description, and metadata
 - Metadata row: Last Played · Play Time
 - Horizontal scrollable game row with scaled focus and white border on selected cover
+- Total game count displayed in the top left corner
 
 ## Installation
 
