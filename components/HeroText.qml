@@ -51,24 +51,26 @@ Item {
             color: root.bodyTxt
             font.pixelSize: Math.max(17, root.height * 0.022)
             wrapMode: Text.WordWrap
-            maximumLineCount: 3
+            maximumLineCount: 10
             elide: Text.ElideRight
-            lineHeight: 1.5
+            lineHeight: 1.2
             visible: text !== ""
-            bottomPadding: root.height * 0.028
+            bottomPadding: root.height * 0.03
         }
 
         Row {
             spacing: 4
 
             Text {
-                text: "Play time: " + formatPlayTime(currentGame.playTime)
+                text: "Playtime: " + formatPlayTime(currentGame.playTime)
+                visible: currentGame.playTime > 0
                 color: root.dimColor
                 font.pixelSize: root.fontSize
             }
 
             Text {
                 text: "  ·  "
+                visible: currentGame.playTime > 0
                 color: root.dimColor
                 font.pixelSize: root.fontSize
                 font.bold: true
