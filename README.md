@@ -4,7 +4,9 @@ Simple [Pegasus Frontend](https://pegasus-frontend.org/) theme built around full
 
 ## Preview
 
-_Screenshots coming soon._
+![Frostline screenshot 1](./screenshots/screenshot1.webp)
+
+![Frostline screenshot 2](./screenshots/screenshot2.webp)
 
 ## Features
 
