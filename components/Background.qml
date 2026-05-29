@@ -46,8 +46,11 @@ Item {
             }
         }
 
-        Behavior on opacity { 
-            NumberAnimation { duration: 250; easing.type: Easing.InOutQuad } 
+        Behavior on opacity {
+            NumberAnimation {
+                duration: 250
+                easing.type: Easing.InOutQuad
+            }
         }
     }
 
