@@ -37,7 +37,7 @@ Item {
         Image {
             id: heroImg
             anchors.fill: parent
-            source: currentGame.assets.boxFront || ""
+            source: currentGame.assets.boxFront || "../assets/no-cover.svg"
             fillMode: Image.PreserveAspectCrop
             layer.enabled: true
             layer.effect: FastBlur {

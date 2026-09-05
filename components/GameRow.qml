@@ -86,7 +86,7 @@ ListView {
                 anchors.fill: parent
                 anchors.margins: delegateRoot.isSelected ? 4 : 0
                 fillMode: Image.PreserveAspectCrop
-                source: modelData.assets.boxFront || ""
+                source: modelData.assets.boxFront || "../assets/no-cover.svg"
                 cache: true
                 smooth: true
                 asynchronous: true

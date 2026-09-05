@@ -14,7 +14,7 @@ Item {
     Image {
         id: bgImg
         anchors.fill: parent
-        source: currentGame.assets.background || currentGame.assets.banner || currentGame.assets.screenshot || ""
+        source: currentGame.assets.background || currentGame.assets.banner || currentGame.assets.screenshot || "../assets/no-cover.svg"
         fillMode: Image.PreserveAspectCrop
         layer.enabled: true
         layer.effect: FastBlur {
