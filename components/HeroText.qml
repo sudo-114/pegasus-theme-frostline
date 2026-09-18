@@ -47,7 +47,7 @@ Item {
         Text {
             id: descText
             width: parent.width * 0.7
-            text: currentGame.description || "No description available..."
+            text: currentGame.description || ""
             color: root.bodyTxt
             font.pixelSize: Math.max(17, root.height * 0.022)
             wrapMode: Text.WordWrap
